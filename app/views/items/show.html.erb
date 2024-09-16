@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1><%= @item.name %></h1>
+
+<p><strong>Description:</strong> <%= @item.description %></p>
+<p><strong>Sale Price:</strong> <%= number_to_currency(@item.sale_price) %></p>
+<p><strong>Purchase Price:</strong> <%= number_to_currency(@item.purchase_price) %></p>
+<p><strong>Status:</strong> <%= @item.status %></p>
+
+<div>
+  <% if @item.images.attached? %>
+    <h2>Images</h2>
+    <div class="image-gallery">
+      <% @item.images.each do |image| %>
+        <%= image_tag image, size: "300x300", class: "item-image" %>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No images available.</p>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Edit this item", edit_item_path(@item) %> |
+  <%= link_to "Back to items", items_path %>
+
+  <%= button_to "Destroy this item", @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>

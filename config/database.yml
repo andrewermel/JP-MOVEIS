@@ -1,0 +1,22 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: jpmoveis_development
+
+test:
+  <<: *default
+  database: jpmoveis_test
+
+production:
+  <<: *default
+  database: jpmoveis_production
+  username: jpmoveis
+  password: <%= ENV["JPMOVEIS_DATABASE_PASSWORD"] %>
