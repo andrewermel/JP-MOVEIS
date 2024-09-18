@@ -7,58 +7,52 @@ Deletar móveis.
 Visualizar todos os produtos cadastrados.
 Restrição de páginas de administração (inserção/deleção de móveis) para usuários autenticados.
 Funcionamento como catálogo online para encomendas de clientes.
+
 Tecnologias Utilizadas
 Ruby on Rails para desenvolvimento da aplicação web.
-Hotwire para atualização dinâmica do frontend.
-PostgreSQL como banco de dados.
-RSpec para testes automatizados.
-CSS para estilização da interface.
-Importmap para gestão de pacotes de JavaScript.
-Devise para autenticação de usuários.
+  Hotwire para atualização dinâmica do frontend.
+  PostgreSQL como banco de dados.
+  RSpec para testes automatizados.
+  CSS para estilização da interface.
+  Importmap para gestão de pacotes de JavaScript.
+  Devise para autenticação de usuários.
+  
 Requisitos
-Ruby 3.3.0
-Rails 7.x.x
-PostgreSQL 13+
-Node.js (para funcionalidade opcional de gerenciamento de pacotes JavaScript)
-Yarn (caso esteja utilizando Node.js)
+  Ruby 3.3.0
+  Rails 7.x.x
+  PostgreSQL 13+
+  Node.js (para funcionalidade opcional de gerenciamento de pacotes JavaScript)
+  Yarn (caso esteja utilizando Node.js)
+  
 Passos para rodar o projeto
 Clone o repositório:
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/jpmoveis.git
-cd jpmoveis
+  git clone https://github.com/seu-usuario/jpmoveis.git
+  cd jpmoveis
+
 Instale as dependências:
 
-bash
-Copiar código
-bundle install
+  bundle install
+  
 Configuração do Banco de Dados: Configure as credenciais do PostgreSQL no arquivo config/database.yml de acordo com o seu ambiente de desenvolvimento.
 
 Crie o banco de dados:
 
-bash
-Copiar código
-rails db:create
-rails db:migrate
-Instale Hotwire (se necessário):
+  rails db:create
+  rails db:migrate
+  Instale Hotwire (se necessário):
 
-bash
-Copiar código
-bin/rails hotwire:install
-Rodar o servidor:
+  bin/rails hotwire:install
+  Rodar o servidor:
 
-bash
-Copiar código
-rails server
-Acesse a aplicação no navegador: Abra http://localhost:3000 para visualizar a aplicação em execução.
+  rails server
+  Acesse a aplicação no navegador: Abra http://localhost:3000 para visualizar a aplicação em execução.
 
 Testes
 Para rodar os testes:
 
-bash
-Copiar código
-rspec
+  rspec
+  
 Contribuições
 Esta aplicação é um projeto pessoal para ajudar a loja de móveis da família e não tem fins lucrativos. Contribuições são bem-vindas, principalmente em termos de melhorias de código, testes ou otimização de desempenho.
 
