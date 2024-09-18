@@ -1,15 +1,68 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* Estilos gerais para sua aplicação */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 100vh;       /* Garante que o conteúdo ocupe a altura total da janela */
+    margin: 0;               /* Remove margens padrão */
+    background-color: #ffffff; /* Cor de fundo azul */
+    line-height: 1.5;
+   
+}
+
+header h1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px; /* Adiciona espaço a partir do topo e esquerda */
+    font-size: 24px;
+    color: black; /* Cor do texto */
+}
+
+h1 {
+    color: #333;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+.fotos {
+    width: 500px;  /* Largura desejada */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.item-image {
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+    display: flex;
+    gap: 10px;
+}
+
+.item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.novo {
+    position: absolute;
+    top: 0;
+    left: 1;
+    margin: 20px; /* Adiciona espaço a partir do topo e esquerda */
+    font-size: 24px;
+    color: black; /* Cor do texto */
+
+
+}
+.novo_produto {
+    position: absolute;
+    top: 0;
+}

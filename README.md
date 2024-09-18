@@ -1,25 +1,66 @@
-# README
+JPMoveis - Catálogo de Produtos
+Aplicação sendo desenvolvida sem nenhum fim lucrativo para ajudar a família dona de uma loja de móveis. A aplicação serve como um catálogo de produtos, permitindo que os clientes façam encomendas de produtos que não precisam estar disponíveis no estoque no momento da compra.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Funcionalidades
+Inserção de novos móveis com valores de venda e compra, descrição, nome, status (disponível/indisponível) e múltiplas imagens.
+Deletar móveis.
+Visualizar todos os produtos cadastrados.
+Restrição de páginas de administração (inserção/deleção de móveis) para usuários autenticados.
+Funcionamento como catálogo online para encomendas de clientes.
+Tecnologias Utilizadas
+Ruby on Rails para desenvolvimento da aplicação web.
+Hotwire para atualização dinâmica do frontend.
+PostgreSQL como banco de dados.
+RSpec para testes automatizados.
+CSS para estilização da interface.
+Importmap para gestão de pacotes de JavaScript.
+Devise para autenticação de usuários.
+Requisitos
+Ruby 3.3.0
+Rails 7.x.x
+PostgreSQL 13+
+Node.js (para funcionalidade opcional de gerenciamento de pacotes JavaScript)
+Yarn (caso esteja utilizando Node.js)
+Passos para rodar o projeto
+Clone o repositório:
 
-Things you may want to cover:
+bash
+Copiar código
+git clone https://github.com/seu-usuario/jpmoveis.git
+cd jpmoveis
+Instale as dependências:
 
-* Ruby version
+bash
+Copiar código
+bundle install
+Configuração do Banco de Dados: Configure as credenciais do PostgreSQL no arquivo config/database.yml de acordo com o seu ambiente de desenvolvimento.
 
-* System dependencies
+Crie o banco de dados:
 
-* Configuration
+bash
+Copiar código
+rails db:create
+rails db:migrate
+Instale Hotwire (se necessário):
 
-* Database creation
+bash
+Copiar código
+bin/rails hotwire:install
+Rodar o servidor:
 
-* Database initialization
+bash
+Copiar código
+rails server
+Acesse a aplicação no navegador: Abra http://localhost:3000 para visualizar a aplicação em execução.
 
-* How to run the test suite
+Testes
+Para rodar os testes:
 
-* Services (job queues, cache servers, search engines, etc.)
+bash
+Copiar código
+rspec
+Contribuições
+Esta aplicação é um projeto pessoal para ajudar a loja de móveis da família e não tem fins lucrativos. Contribuições são bem-vindas, principalmente em termos de melhorias de código, testes ou otimização de desempenho.
 
-* Deployment instructions
-
-* ...
-# JP-moveis
+Autores
+Andrew Amorim - Desenvolvedor Backend Ruby on Rails

@@ -1,37 +1,50 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Items Page</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<h1>Items</h1>
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+  </head>
 
-<div id="items">
-  <% @items.each do |item| %>
-    <div class="item">
-      <!-- Exibe a primeira imagem do item, se houver -->
-      <% if item.images.attached? %>
-        <%= image_tag item.images[0], size: "300x300", class: "item-image" %>
-      <% else %>
-        <p>No image available</p>
+  <body>
+    <!-- Cabeçalho da página -->
+    <header>
+      <h1>Produtos</h1>
+      
+    </header>
+
+    <!-- Exibindo a notificação (se houver) -->
+    <p style="color: green"><%= notice %></p>
+
+    <!-- Conteúdo principal da página -->
+    <div id="items" data-controller="items">
+      <% @items.each do |item| %>
+        <div class="item-card" data-controller="item">
+          <!-- Exibindo a imagem do item -->
+          <h2><%= item.name %></h2>
+
+          <div>
+          <% if item.images.attached? %>
+          <%= image_tag item.images.first, size: "300x300", class: "fotos" %>
+          <% else %>
+            <p>No image available.</p>
+          <% end %>
+          </div>
+          
+          <p><%= item.description %></p>
+          <p><%= number_to_currency(item.sale_price) %></p>
+          <div>
+            <%= link_to "Show this item", item_path(item) %>
+          </div>
+        </div>
       <% end %>
-
-      <!-- Exibe o nome do item -->
-      <h2><%= item.name %></h2>
-      
-      <!-- Exibe a descrição do item -->
-      <p><strong>Description:</strong> <%= item.description %></p>
-      
-      <!-- Exibe o preço de venda do item -->
-      <p><strong>Sale Price:</strong> <%= number_to_currency(item.sale_price) %></p>
-      
-      <!-- Exibe o status do item -->
-      <p><strong>Status:</strong> <%= item.status %></p>
-
-      <!-- Link para visualizar o item -->
-      <p>
-        <%= link_to "Show this item", item %>
-      </p>
     </div>
-  <% end %>
-</div>
-
-<!-- Link para criar um novo item -->
-<%= link_to "New item", new_item_path %>
-
+    <div class="novo">
+        <!-- Link para adicionar um novo item -->
+        <%= link_to "novo", new_item_path %>
+    </div>
+  </body>
+</html>

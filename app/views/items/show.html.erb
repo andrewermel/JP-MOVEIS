@@ -3,11 +3,10 @@
 <h1><%= @item.name %></h1>
 
 <p><strong>Description:</strong> <%= @item.description %></p>
-<p><strong>Preço:</strong> <%= number_to_currency(@item.sale_price) %></p>
-<p><strong>preço de compra:</strong> <%= number_to_currency(@item.purchase_price) %></p>
+<p><strong>Sale Price:</strong> <%= number_to_currency(@item.sale_price) %></p>
 <p><strong>Status:</strong> <%= @item.status %></p>
 
-<div>
+<div data-controller="item-show">
   <% if @item.images.attached? %>
     <h2>Images</h2>
     <div class="image-gallery">
